@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+	<title>Astronomy Club Asu</title>
+	<link rel="icon" type="image/vnd.microsoft.icon"
+     href="v3.png" />
+    	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/w3.css">
+	<script src="js/html5shiv.min.js"></script>
+<script src="js/respond.min.js"></script>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<style>
+	::-webkit-scrollbar {
+    width: 0px;
+}
+	body{
+		background: rgba(255,255,255,0.7);
+
+	}
+	.beforeload{
+		position: fixed;z-index: 2200;bottom: 0px;
+
+	}
+	.beforeloadx{
+		position: fixed;z-index: 2000;bottom: 0px;
+				background-color: #203855;
+				height: 100%;width: 100%;
+	}
+	.top-bar-xml{
+		z-index: 300;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 11%;
+		background-color: #203855;
+	}
+	.top-header-xml{
+		z-index: 200;
+		position: absolute;
+		left: 0px;
+		width: 200%;
+		margin-left: -50%;
+		padding-left: 50%;
+		padding-right: 50%;
+		background-color: #203855;
+		box-shadow: 0px 3px 3px #282828;
+	}
+	.bottom-bar-xml{
+		z-index: 100;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		padding-top: 100px;		
+	}
+	.grad1
+	{
+			background: white; /* For browsers that do not support gradients */
+		background: -webkit-linear-gradient(-90deg, #585858 ,#4e4e4e, #1e1e1e); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(-90deg,#585858 ,#4e4e4e, #3a3a3a); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(-90deg, #585858 ,#4e4e4e, #3a3a3a); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(0deg, rgba(255,255,255,0.1),rgba(255,255,255,0.1),rgba(255,255,255,0.1) ,rgba(255,255,255,0.2), rgba(255,255,255,0.9)); /* Standard syntax */
+	}
+	.grad2
+	{
+			background: white; /* For browsers that do not support gradients */
+		background: -webkit-linear-gradient(-90deg, #585858 ,#4e4e4e, #1e1e1e); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(-90deg,#585858 ,#4e4e4e, #3a3a3a); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(-90deg, #585858 ,#4e4e4e, #3a3a3a); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(0deg, rgba(255,255,255,0.1),rgba(255,255,255,0.5), rgba(255,255,255,0.9)); /* Standard syntax */
+	}
+	.gradend,.gradbend{
+		background: rgba(255,255,255,0.7);
+	}
+	.xx
+	{
+		background: white; /* For browsers that do not support gradients */
+		background: -webkit-linear-gradient(-90deg, #585858 ,#4e4e4e, #1e1e1e); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(-90deg,#585858 ,#4e4e4e, #3a3a3a); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(-90deg, #585858 ,#4e4e4e, #3a3a3a); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(90deg, rgba(255,255,255,0.2), rgba(255,255,255,0.8), rgba(255,255,255,0.9), rgba(255,255,255,0.9), rgba(255,255,255,0.8), rgba(255,255,255,0.8),rgba(255,255,255,0.9), rgba(255,255,255,0.8) ,rgba(255,255,255,0.9), rgba(255,255,255,0.3)); /* Standard syntax */
+	}
+	.xxm
+	{
+		background: linear-gradient(90deg, rgba(255,255,255,0.3),rgba(255,255,255,0.9), rgba(255,255,255,0.8) ,rgba(255,255,255,0.9), rgba(255,255,255,0.3)); /* Standard syntax */
+	}
+	.innerimg{
+						opacity: 0;
+
+		direction:rtl;
+		position: relative;
+	}
+	.innerlogo{
+		opacity: 0;
+		height:   100%;
+		position: relative;
+	}
+	.innerlogox{
+		height:   90%;
+		top: 20%;
+		position: relative;
+	}
+	.innertext{
+				opacity: 0;
+		z-index: 100;
+		position: relative;
+		font :16px/24px Roboto,sans-serif;
+		color: #ffffff;
+	}
+	p{
+		z-index: 100;
+		position: relative;
+		font :16px/24px Roboto,sans-serif;
+	}
+	h1{
+		z-index: 100;
+		position: relative;
+		font :26px/34px Roboto,sans-serif;
+		font-weight: bold;
+		color: #203855;
+	}
+	h5{
+		z-index: 100;
+		position: relative;
+		font :16px/24px Roboto,sans-serif;
+		color: #6d97c9;
+	}
+	span.innertext{
+		font-weight: bold;
+	}
+	.btn-lg{
+		margin-top: 20px;
+		margin-bottom: 20px;
+		padding: 25px 50px;
+		font :14px/20px Roboto,sans-serif;
+		font-weight: bold;
+	}
+	.bottom-nav{
+		visibility: hidden;
+	}
+	.bgbt{
+		border: 0px;
+	}
+	.entireimg{
+		z-index: 50;
+		position: fixed;
+	}
+	.entireimg2{
+		z-index: 50;
+		position: fixed;
+		bottom: 0px;
+		height: 70%;
+	}
+	#ln1{
+	   
+	}
+
+</style>
+
+</head>
+<body>
+	<div class="top-bar-xml w3-container">
+			<div class="w3-container innerlogox" >
+				<img src="components/logo3.png" class="innerlogo" id="logo">
+			</div>
+	</div>
+	<div class="top-header-xml  w3-row">
+		<div class="innertext w3-container w3-container w3-col m6 l6 s6 ">
+			<div class="w3-container">
+				<br>
+				<p class="w3-text-shadow">7 years, 2 universities, 84 member <br>projects, 5,000+ students.
+				<span class="innertext"><br>Over 4 events a year.</span></p>
+					<button type="button" class=" btn btn-primary bgbt w3-purple w3-hover-white btn-lg">Our Events</button>
+					<br>
+					<div class="btn-group btn-group-justified bottom-nav">
+						<a href="#" class="btn btn-primary">Apple</a>
+						<a href="#" class="btn btn-primary">Samsung</a>
+						<a href="#" class="btn btn-primary">Sony</a>
+					</div>
+					<div class="btn-group btn-group-justified bottom-nav">
+						<a href="#" class="btn btn-primary">Apple</a>
+						<a href="#" class="btn btn-primary">Samsung</a>
+						<a href="#" class="btn btn-primary">Sony</a>
+					</div>
+			</div>
+		</div>
+		<div class="w3-col m6 l6 s6 innerimg">
+			<img src="components/aa2.png">
+		</div>
+		
+	</div>
+	<div class="bottom-bar-xml  grad1">
+			<div class=" w3-container  grad2"><div class=" w3-container"><div class=" w3-container"><div class=" w3-container"><div class=" w3-container"><div class=" w3-container xx">
+
+		<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container w3-hide-large w3-hide-small ">
+  <div class="w3-content ">
+    <div class="w3-twothird  w3-center w3-col m6 l8 s10  ">
+     <h1>How to Identify Constellations</h1>
+      <p class="w3-text-grey">First you need:A star chart (can be found on skymaps.com) ,A really dark sky ,A good pair of eyes ,To use a star chart to identify stars and constellations, you must first find the one appropriate for the time of year you are observing. Face North to Orient the star Chart. If the star chart says South, turn yourself and the starchart south. Make sure everything is lined up correctly by facing Polaris for North. Polaris is the North Star. It is one of the brightest star and is most of the time near the horizon.</p>
+             <h5 class="w3-padding-8">through Astronomy Observable Universe Sessions ,you can get to know all of these, stay tuned</h5>
+
+    </div>
+
+    <div class="w3-third w3-right w3-center tel">
+      <i  ><img style="margin-top: 130px;margin-left: -70px;width: 100%" src="components/astronomy2.png"></i>
+    </div>
+  </div>
+</div>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container w3-hide-small w3-hide-medium" id="scrol1">
+  <div class="w3-content ">
+    <div class="w3-twothird  w3-center w3-col m6 l8 s10 ">
+      <h1>How to Identify Constellations</h1>
+      <p class="w3-text-grey">First you need:A star chart (can be found on skymaps.com) ,A really dark sky ,A good pair of eyes ,To use a star chart to identify stars and constellations, you must first find the one appropriate for the time of year you are observing. Face North to Orient the star Chart. If the star chart says South, turn yourself and the starchart south. Make sure everything is lined up correctly by facing Polaris for North. Polaris is the North Star. It is one of the brightest star and is most of the time near the horizon.</p>
+             <h5 class="w3-padding-8">through Astronomy Observable Universe Sessions <br>you can get to know all of these, stay tuned</h5>
+
+    </div>
+
+    <div class="w3-third w3-right w3-center tel">
+      <i  ><img style="margin:  65px 25%;width: 70%" src="components/astronomy2.png"></i>
+    </div>
+  </div>
+</div>
+
+<!-- First Grid -->
+<div class="w3-row-padding  w3-padding-64 w3-container w3-hide-large w3-hide-medium">
+  <div class="w3-content w3-center ">
+    <div class="w3-third w3-center">
+      <i  ><img style="margin:  15%;width: 70% tel" src="components/astronomy2.png"></i>
+    </div>
+
+    <div class="w3-twothird w3-right w3-col m6 l8 s12">
+    <h1>How to Identify Constellations</h1>
+      <p class="w3-text-grey">First you need:A star chart (can be found on skymaps.com) ,A really dark sky ,A good pair of eyes ,To use a star chart to identify stars and constellations, you must first find the one appropriate for the time of year you are observing. Face North to Orient the star Chart. If the star chart says South, turn yourself and the starchart south. Make sure everything is lined up correctly by facing Polaris for North. Polaris is the North Star. It is one of the brightest star and is most of the time near the horizon.</p>
+             <h5 class="w3-padding-8">through Astronomy Observable Universe Sessions <br>you can get to know all of these, stay tuned</h5>
+ </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding  w3-padding-64 w3-container w3-hide-large w3-hide-medium">
+  <div class="w3-content w3-center ">
+    <div class="w3-third w3-center">
+      <i  ><img class="solar" style="margin:  15%;width: 70%" src="components/solar-system.png"></i>
+    </div>
+
+    <div class="w3-twothird w3-right w3-col m6 l8 s12">
+     <h5 class="w3-padding-8">Astronomy Club ASU is offering you a journey across the galaxy and beneath the atomic scale to discover the wonders of our universe through free sessions in summer by discussing three interesting topics :</h5>
+
+      <p class="w3-text-grey">Special Relativity,General Relativity and Quantum Physics</p> </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding  w3-padding-64 w3-container w3-hide-small w3-hide-large">
+  <div class="w3-content ">
+    <div class="w3-third w3-center">
+      <i  ><img  class="solar" style="margin:  35px 25%;width: 100%" src="components/solar-system.png"></i>
+    </div>
+
+    <div class="w3-twothird w3-right w3-col m6 l8 s10">
+     <h5 class="w3-padding-8">Astronomy Club ASU is offering you a journey across the galaxy and beneath the atomic scale to discover the wonders of our universe through free sessions in summer by discussing three interesting topics :</h5>
+
+      <p class="w3-text-grey">Special Relativity,General Relativity and Quantum Physics</p></div>
+  </div>
+</div>
+<!-- Second Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container w3-hide-small w3-hide-medium" id="scrol2">
+  <div class="w3-content ">
+    <div class="w3-third w3-center">
+      <i  ><img class="solar" style="margin:  -15px -35%;width: 70%" src="components/solar-system.png"></i>
+    </div>
+
+    <div class="w3-twothird w3-right w3-col m6 l8 s10">
+      <h5 class="w3-padding-8">Astronomy Club ASU is offering you a journey across the galaxy and beneath the atomic scale to discover the wonders of our universe through free sessions in summer by discussing three interesting topics :</h5>
+
+      <p class="w3-text-grey">Special Relativity,General Relativity and Quantum Physics</p>
+    </div>
+  </div>
+</div>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container " id="scrol3">
+  <div class="w3-content ">
+    <div class="w3-col l8 m8 s8  w3-left w3-col m6 l8 s10 ">
+      <h5 class="w3-padding-8 " style="direction:rtl">
+          اكتر حاجة بتميز الانسان هى حب المعرفة,حب المعرفة اللى خلى الانسان يعبر القارات ويتسلق أعلى الجبال ويستكشف اعماق المحيطات المظلمة, ولما بص لفوق وشاف السما جمالها سحره و شاف إن المغامره المطلقة هاتبقى فعلاً إنه يستكشف بنفسه الجمال اللى أبهر عينيه ده.
+          <h5>
+      <p class="w3-text-grey" style="direction:rtl">وإحنا ك Astronomy Club هدفنا واللى بنحلم بيه هو إننا نساعد الناس بمختلف الاعمار إنهم يشاركوا فى المغامره دي وهى استكشاف الفضاء ,عن طريق إننا نخليهم يتفرجوا على جمال السما والكواكب والنجوم بعينيهم اللى ممكن يبقى اجمل شئ ممكن يشوفوه ,وزى ماهو جميل جداً اننا نشوف الحجات ديه حايبقى اجمل إننا نستكشف أسرار الكون اللي شايفينها و اللي بعيدة عننا ملايين السنين الضوئية و نعرف ازاى أتكونت وازاى بتتصرف ونفهم العلم اللى بيخلينا نقدر نفسرها ,وده عن طريق حاجات كتير زى Sessions و Work Shops و Stargazing nights و Conferences تجمع ناس عظيمه ومتميزه فى مجال الفضاء والastronomy تكلمنا عن المغامره المطلقه دي اللى عايزيين نفضل نكون جزء منها.</p>
+    </div>
+    <div class="w3-col l1 m1 s1 w3-right w3-center ">
+    </div>
+    <div class="w3-col l3 m3 s3 w3-right w3-center " style="margin-top: 68px">
+      <i  ><div style=";width: 100%"  id="ln0" class='rot0'>
+	<img style="width: 100%" src="components/v1.png" >
+	</div>
+	<div id="ln1" style=";width: 100%;" class='rot1'>
+	<img style="width:  100%" src="components/v1.png">
+	</div>
+	<div id="ln2" style=";width: 100%; -webkit-filter: blur(0px);
+  visibility: visible;" >
+	<img style="width:  100%" src="components/v2.png">
+	</div>
+	<script>
+		$('#ln1').css({"margin-top": "-"+document.getElementById('ln0').clientHeight+"px"});
+		$('#ln2').css({"margin-top": "-"+document.getElementById('ln0').clientHeight+"px"});
+	</script>
+      </i>
+    </div>
+  </div>
+</div>
+
+<div style="height: 50px;">
+</div>
+	</div>	</div>
+	</div></div></div>
+			<div class="grad2 w3-container xxm" style="width: 100%;height: 250px;">
+				
+			</div>
+			</div><div class="gradbend" >
+			<div  id="endclouds"  >
+				<img  style="width:  100%;z-index: 20" src="components/clouds.png">
+				<script>
+					document.getElementById('endclouds').clientWidth=window.innerWidth/2;
+				</script>
+				</div>
+			<div class="w3-container " style="width: 100%;height: 50px;">
+				
+			</div>
+				<div  class="sliding">
+					<div id="advend" style="width:  100%">
+				<img  style="width:  100%;" src="components/leftadvertise.png">
+				</div><div id="inadv1" class="slidernow" style="width:  100%;opacity: 0">
+				<img  style="width:  100%" src="components/inadv1.png">
+				</div><div id="inadv2" class="slidernotnow" style="width:  100%;opacity: 0">
+				<img  style="width:  100%" src="components/inadv1.png">
+				</div>
+	
+				
+				</div>
+				
+				<div class="w3-container " style="width: 100%;height: 150px;">
+				
+			</div>
+				<script>
+					document.getElementById('advend').clientWidth=window.innerWidth/2;
+					document.getElementById('inadv1').clientWidth=window.innerWidth/2;
+					document.getElementById('inadv2').clientWidth=window.innerWidth/2;
+					var whertt=document.getElementById('advend').clientHeight;
+					var dontslide="sleep";
+					$('#inadv1').css({"margin-top": "-"+whertt+"px"});
+					$('#inadv2').css({"margin-top": "-"+whertt+"px"});
+					function sliderbegin(){
+						if (dontslide=="sleep") {
+							$(".slidernow").animate({opacity: '0'},1500,function(){
+							});
+                        setTimeout(function(){
+                            $(".slidernotnow").animate({opacity: '1'},1500,function(){
+							var nnsj=document.getElementsByClassName('slidernow')[0];
+							document.getElementsByClassName('slidernotnow')[0].classList.add('slidernow');
+							document.getElementsByClassName('slidernotnow')[0].classList.remove('slidernotnow');
+							nnsj.classList.add('slidernotnow');
+							nnsj.classList.remove('slidernow');
+							document.getElementsByClassName('sliding')[0].appendChild(document.getElementsByClassName('sliding')[0].children[1]);
+							});
+                        },2500);
+						
+						}
+					}
+					sliderbegin();
+					//slidingvar=setInterval(function(){sliderbegin();},40000);
+					var slidingvar=setInterval(function(){sliderbegin();},10000);//kant7
+					document.getElementsByClassName('sliding')[0].onmouseover=function(){
+						 dontslide="active";
+						};
+					document.getElementsByClassName('sliding')[0].onmouseout=function(){
+						dontslide="sleep";
+						};
+				</script>
+				
+				<div id="end"  >
+				<img style="width:  100%;z-index: 10" src="components/xx4.png">
+				<script>
+					document.getElementById('end').clientWidth=window.innerWidth/2;
+				</script>
+				</div>
+				<div  id="end2"  >
+				<img  style="width:  100%;z-index: 20" src="components/end2.png">
+				<script>
+					document.getElementById('end2').clientWidth=window.innerWidth/2;
+					$('#end2').css({"margin-top": "-"+document.getElementById('end').clientHeight+"px"});
+				</script>
+				</div>
+				
+			</div>
+	</div>
+	<div class="entireimg">
+		<img src="components/x22.png" >
+		<img src="components/x22.png" >
+	</div>
+				<div class="beforeload">
+				<img id="bend" style="width:  100%" src="components/mars2.png">
+				<script>
+					document.getElementById('bend').clientWidth=window.innerWidth/2;
+				</script>
+				</div>
+				<div class="beforeloadx" >
+				</div>
+				<script>
+					window.scrollTo(0, 0);
+					var testyet="notyet";
+					//window.onload=function(){
+					//		$(".beforeload").animate({bottom: '-'+window.innerHeight+'px'},4500);
+					//	$(".beforeloadx").animate({bottom: '-'+window.innerHeight+'px'},400,function(){
+					//		});
+					//	var kks=document.getElementsByClassName('top-header-xml')[0].clientHeight;
+					//	$(".top-header-xml").animate({height: '+'+window.innerHeight+'px'},400,function(){
+					//		$(".top-header-xml").animate({height: '+'+kks+'px'},2000);
+					//		$(".innertext").animate({opacity: '1'},2000);
+					//		$(".innerimg").animate({opacity: '1'},2000);
+					//		$(".innerlogo").animate({opacity: '1'},2000,function(){testyet="yet";});
+					//		});
+					//	
+					//	}
+						setTimeout(function(){
+							$(".beforeload").animate({bottom: '-'+window.innerHeight+'px'},4500);
+						$(".beforeloadx").animate({bottom: '-'+window.innerHeight+'px'},400,function(){
+							});
+						var kks=document.getElementsByClassName('top-header-xml')[0].clientHeight;
+						$(".top-header-xml").animate({height: '+'+window.innerHeight+'px'},400,function(){
+							$(".top-header-xml").animate({height: '+'+kks+'px'},2000);
+							$(".innertext").animate({opacity: '1'},2000);
+							$(".innerimg").animate({opacity: '1'},2000);
+							$(".innerlogo").animate({opacity: '1'},2000,function(){testyet="yet";
+										
+									
+									/*setTimeout(function(){
+										$('html, body').animate({
+									scrollTop: $("#scrol1").offset().top-200
+								    }, 3000);
+										},3000);
+									setTimeout(function(){
+										$('html, body').animate({
+									scrollTop: $("#scrol2").offset().top-280
+								    }, 3000);
+										},9000);
+									setTimeout(function(){
+										$('html, body').animate({
+									scrollTop: $("#scrol3").offset().top-200
+								    }, 3000);
+										},16000);
+									setTimeout(function(){
+										$('html, body').animate({
+									scrollTop: $("#end2").offset().top-200
+								    }, 18000);
+										},24000);*/
+										
+										});
+							});
+						
+						},3000);
+				</script>
+				
+	
+	<script>
+		
+		
+		
+		
+		var 	wherexmmr0='left',wherexmmrt='right',wherexmmr1='right',wherexmm='left',done="yes",wherexmmr='left',doner="yes";
+		var xmm=document.getElementsByClassName('entireimg')[0].clientWidth;
+		xmm=xmm/6.0;
+		function movingheader() {
+			$(".top-header-xml").animate(
+					{rotation: 4},
+					{
+					  duration: 5000,
+					  step: function(now, fx) {
+					      $(this).css({"transform": "rotate("+now+"deg)"});
+					  }
+					});
+			$(".top-header-xml").animate(
+						{rotation: -4},
+					{
+					  duration: 10000,
+					  step: function(now, fx) {
+					      $(this).css({"transform": "rotate("+now+"deg)"});
+					  }
+					});
+			$(".top-header-xml").animate(
+						{rotation: 0},
+						{
+						  duration: 5000,
+						  step: function(now, fx) {
+						      $(this).css({"transform": "rotate("+now+"deg)"});
+						  }
+						});
+		}
+		function stopheader() {
+			$(".top-header-xml").finish();
+		}
+		function movingstar() {
+			if (wherexmm=='left') {
+					$(".entireimg").animate(
+					{rotation: 720},
+					{
+					  duration: 240000,
+					  step: function(now, fx) {
+					      $(this).css({"transform": "rotate("+now+"deg)"});
+					  }
+					}
+				    );
+					$(".entireimg").animate(
+					{rotation:0},
+					{
+					  duration: 10,
+					  step: function(now, fx) {
+					      $(this).css({"transform": "rotate("+now+"deg)"});
+					  }
+					}
+				    );
+				wherexmm='right';
+				
+				}
+				else{
+					$(".entireimg").animate(
+					{rotation: 720},
+					{
+					  duration: 240000,
+					  step: function(now, fx) {
+					      $(this).css({"transform": "rotate("+now+"deg)"});
+					  }
+					}
+				    );
+					$(".entireimg").animate(
+					{rotation:0},
+					{
+					  duration: 10,
+					  step: function(now, fx) {
+					      $(this).css({"transform": "rotate("+now+"deg)"});
+					  }
+					}
+				    );
+					wherexmm='left';
+				}
+		}
+		function movingsolar() {
+			if (wherexmmr=='left') {
+					$(".solar").animate(
+					{rotation: 720},
+					{
+					  duration: 30500,
+					  step: function(now, fx) {
+					      $(this).css({"transform": "rotate("+now+"deg)"});
+					  }
+					}
+				    );
+					$(".solar").animate(
+					{rotation:0},
+					{
+					  duration: 10,
+					  step: function(now, fx) {
+					      $(this).css({"transform": "rotate("+now+"deg)"});
+					  }
+					}
+				    );
+				wherexmmr='right';
+				
+				}
+				else{
+					$(".solar").animate(
+					{rotation: 720},
+					{
+					  duration: 30500,
+					  step: function(now, fx) {
+					      $(this).css({"transform": "rotate("+now+"deg)"});
+					  }
+					}
+				    );
+					$(".solar").animate(
+					{rotation:0},
+					{
+					  duration: 10,
+					  step: function(now, fx) {
+					      $(this).css({"transform": "rotate("+now+"deg)"});
+					  }
+					}
+				    );
+					wherexmmr='left';
+				}
+		}
+		function movingtel() {
+			if (wherexmmrt=='left') {
+					$(".tel").animate(
+					{rotation: 10},
+					{
+					  duration: 6000,
+					  step: function(now, fx) {
+					      $(this).css({"transform": "rotate("+now+"deg)"});
+					  }
+					}
+				    );
+				wherexmmrt='right';
+				
+				}
+				else{
+					$(".tel").animate(
+					{rotation: -10},
+					{
+					  duration: 6000,
+					  step: function(now, fx) {
+					      $(this).css({"transform": "rotate("+now+"deg)"});
+					  }
+					}
+				    );
+					wherexmmrt='left';
+				}
+		}
+		function movingrot1() {
+			if (wherexmmr1=='left') {
+					$(".rot1").animate(
+					{rotation: 720},
+					{
+					  duration: 45500,
+					  step: function(now, fx) {
+					      $(this).css({"transform": "rotate("+now+"deg)"});
+					  }
+					}
+				    );
+					$(".rot1").animate(
+					{rotation:0},
+					{
+					  duration: 10,
+					  step: function(now, fx) {
+					      $(this).css({"transform": "rotate("+now+"deg)"});
+					  }
+					}
+				    );
+				wherexmmr1='right';
+				
+				}
+				else{
+					$(".rot1").animate(
+					{rotation: 720},
+					{
+					  duration: 45500,
+					  step: function(now, fx) {
+					      $(this).css({"transform": "rotate("+now+"deg)"});
+					  }
+					}
+				    );
+					$(".rot1").animate(
+					{rotation:0},
+					{
+					  duration: 10,
+					  step: function(now, fx) {
+					      $(this).css({"transform": "rotate("+now+"deg)"});
+					  }
+					}
+				    );
+					wherexmmr1='left';
+				}
+		}
+		function movingrot0() {
+			if (wherexmmr0=='left') {
+					$(".rot0").animate(
+					{rotation: 720},
+					{
+					  duration: 30500,
+					  step: function(now, fx) {
+					      $(this).css({"transform": "rotate("+now+"deg)"});
+					  }
+					}
+				    );
+					$(".rot0").animate(
+					{rotation:0},
+					{
+					  duration: 10,
+					  step: function(now, fx) {
+					      $(this).css({"transform": "rotate("+now+"deg)"});
+					  }
+					}
+				    );
+				wherexmmr0='right';
+				
+				}
+				else{
+					$(".rot0").animate(
+					{rotation: -720},
+					{
+					  duration: 30500,
+					  step: function(now, fx) {
+					      $(this).css({"transform": "rotate("+now+"deg)"});
+					  }
+					}
+				    );
+					$(".rot0").animate(
+					{rotation:0},
+					{
+					  duration: 10,
+					  step: function(now, fx) {
+					      $(this).css({"transform": "rotate("+now+"deg)"});
+					  }
+					}
+				    );
+					wherexmmr0='left';
+				}
+		}
+                        movingtel();
+						movingsolar();	
+						movingstar();
+						movingrot0();	
+						movingrot1();
+		setInterval(function(){
+			movingstar();	
+			},240000);
+		setInterval(function(){
+			movingsolar();	
+			},30500);
+		setInterval(function(){
+			movingtel();	
+			},6000);
+        setInterval(function(){
+			movingrot1();	
+			},45500);
+		setInterval(function(){
+			movingrot0();	
+			},30500);
+		
+	</script>
+	<script>
+		document.getElementById('logo').clientWidth=document.getElementsByClassName('bgbt')[0].clientWidth;
+		var mesaured=document.getElementsByClassName('top-header-xml')[0].clientHeight;
+		var topbar=document.getElementsByClassName('top-bar-xml')[0].clientHeight;
+		document.getElementsByClassName('bottom-bar-xml')[0].style.top=mesaured+topbar+"px";
+		var mesauredstop=mesaured-topbar;
+		var positionscroll="notyet";
+		document.getElementsByClassName('top-header-xml')[0].style.top='+'+topbar+'px';
+		var wherego=mesaured-(topbar*2);
+		var mesaureds=document.getElementsByClassName('innerimg')[0].clientHeight;
+		document.getElementsByClassName('innerimg')[0].style.top='+'+(mesaured-mesaureds-3)+'px';
+			mesauredstop=mesaured-topbar;
+		document.getElementsByClassName('entireimg')[0].style.top='-'+(window.outerHeigh/2)+'px';
+		document.getElementsByClassName('entireimg')[0].style.left='-'+(window.outerWidth/4)+'px';
+		window.onresize=function()
+		{
+			
+			mesaured=document.getElementsByClassName('top-header-xml')[0].clientHeight;
+			topbar=document.getElementsByClassName('top-bar-xml')[0].clientHeight;	
+			document.getElementsByClassName('bottom-bar-xml')[0].style.top=mesaured+topbar+"px";
+			mesauredstop=mesaured-topbar;
+			positionscroll="notyet";
+			document.getElementsByClassName('top-header-xml')[0].style.top='+'+topbar+'px';
+			wherego=mesaured-(topbar*2);
+			mesaureds=document.getElementsByClassName('innerimg')[0].clientHeight;
+			document.getElementsByClassName('innerimg')[0].style.top='+'+(mesaured-mesaureds-3)+'px';
+			mesauredstop=mesaured-topbar;
+		document.getElementsByClassName('entireimg')[0].style.top='-'+(window.outerHeigh/2)+'px';
+		document.getElementsByClassName('entireimg')[0].style.left='-'+(window.outerWidth/4)+'px';
+				document.getElementById('advend').clientWidth=window.innerWidth/2;
+					document.getElementById('inadv1').clientWidth=window.innerWidth/2;
+					document.getElementById('inadv2').clientWidth=window.innerWidth/2;
+					document.getElementById('inadv3').clientWidth=window.innerWidth/2;
+					var whertt=document.getElementById('advend').clientHeight;
+					$('#inadv1').css({"margin-top": "-"+whertt+"px"});
+					$('#inadv2').css({"margin-top": "-"+whertt+"px"});
+					$('#inadv3').css({"margin-top": "-"+whertt+"px"});
+		}
+		window.onscroll=function(){
+			if (testyet=="notyet") {
+				window.scrollTo(0, 0);
+			}
+			if(window.scrollY >= (mesauredstop)&&positionscroll=="notyet")
+			{
+				document.getElementsByClassName('top-header-xml')[0].style.position="fixed";
+				document.getElementsByClassName('top-header-xml')[0].style.top='-'+(mesauredstop-topbar)+'px';
+				positionscroll="exceed";
+				document.getElementsByClassName('innertext')[0].style.visibility='hidden';
+					}
+			else if(window.scrollY <= mesauredstop&&positionscroll=="exceed")
+			{
+				document.getElementsByClassName('top-header-xml')[0].style.position="absolute";
+				document.getElementsByClassName('top-header-xml')[0].style.top='+'+topbar+'px';
+				positionscroll="notyet";
+				document.getElementsByClassName('innertext')[0].style.visibility='visible';
+			}
+			if(window.scrollY >= (mesauredstop))
+			{
+				movingheader();
+				}
+				else if(window.scrollY < (mesauredstop)){
+								stopheader();	
+				}
+		}
+		
+	</script>
+
+</html>

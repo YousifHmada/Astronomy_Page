@@ -1,0 +1,9 @@
+.bar
+{
+    text-transform: capitalize
+}
+.row
+{
+   display: inline-block;
+   margin: 0px;
+}
