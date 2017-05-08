@@ -192,7 +192,7 @@
 					</div>
 			</div>
 		</div>
-		<div class="w3-col m6 l6 s6 innerimg" style='padding-bottom:4px'>
+		<div class="w3-col m6 l6 s12  innerimg" style='padding-bottom:4px'>
 			<img src="components/aa2.png">
 		</div>
 		
@@ -235,13 +235,13 @@
 
 
 <!-- Second Grid -->
-<div class="w3-row-padding  w3-padding-64 w3-container w3-hide-large w3-hide-medium">
+<div class="w3-row-padding  w3-padding-16 w3-container w3-hide-large w3-hide-medium">
   <div class="w3-content w3-center ">
-    <div class="w3-third w3-center">
-      <i  ><img class="solar" style="margin:  15%;width: 70%" src="components/solar-system.png"></i>
+    <div class="w3-center w3-center">
+      <i  ><img class="solar" style="width: 100%" src="components/solar-system.png"></i>
     </div>
 
-    <div class="w3-twothird w3-right w3-col m6 l8 s12">
+    <div class="w3-center  w3-col m6 l8 s12">
      <h5 class="w3-padding-8">Astronomy Club ASU is offering you a journey across the galaxy and beneath the atomic scale to discover the wonders of our universe through free sessions in summer by discussing three interesting topics :</h5>
 
       <p class="w3-text-grey">Special Relativity,General Relativity and Quantum Physics</p> </div>
@@ -284,7 +284,7 @@
       <i  ><img  style="margin:  15%;width: 70%" src="components/astronomy2.png"></i>
     </div>
 
-    <div class="w3-twothird w3-right w3-col m6 l8 s12">
+    <div class="w3-center w3-right w3-col m6 l8 s12">
      <h5 class="w3-padding-8">How to Identify Constellations</h5>
 
       <p class="w3-text-grey">First you need:A star chart (can be found on skymaps.com) ,A really dark sky ,A good pair of eyes ,To use a star chart to identify stars and constellations, you must first find the one appropriate for the time of year you are observing. Face North to Orient the star Chart. If the star chart says South, turn yourself and the starchart south. Make sure everything is lined up correctly by facing Polaris for North. Polaris is the North Star. It is one of the brightest star and is most of the time near the horizon.</p> 
@@ -440,6 +440,7 @@
 					//	
 					//	}
 						setTimeout(function(){
+                            if(window.outerWidth<'440'){;}else{
 							$(".beforeload").animate({bottom: '-'+window.innerHeight+'px'},4500);
 						$(".beforeloadx").animate({bottom: '-'+window.innerHeight+'px'},400,function(){
 							});
@@ -475,7 +476,7 @@
 										});
 							});
 						
-						},3000);
+						}},3000);
 				</script>
 				
 	
